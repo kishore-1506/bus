@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTC Bus Ticket Booking</title>
+    <link rel="stylesheet" href="bus.css">
+    <script src="bus.js" defer></script>
+</head>
+<body>
+    <!-- Login Page -->
+    <div id="login-page" class="page">
+        <h2>Login to Book Tickets</h2>
+        <form id="login-form">
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <!-- Entering Page -->
+    <div id="entering-page" class="page hidden">
+        <h2>Welcome to MTC Bus Booking</h2>
+        <button id="book-now">Book Now</button>
+    </div>
+
+    <!-- Booking Page -->
+    <div id="booking-page" class="page hidden">
+        <h2>Bus Ticket Booking</h2>
+        <form id="booking-form">
+            <label for="routes">Select Route:</label>
+            <select id="routes" name="routes">
+                <option value="route1">Route 1 - Broadway to Adyar</option>
+                <option value="route2">Route 2 - Central to Thiruvanmiyur</option>
+                <!-- Add more routes as required -->
+            </select>
+
+            <label for="time">Select Time:</label>
+            <input type="time" id="time" required>
+
+            <label for="date">Select Date:</label>
+            <input type="date" id="date" required>
+
+            <label for="quantity">No. of Tickets:</label>
+            <input type="number" id="quantity" min="1" required>
+
+            <button type="submit">Proceed to Payment</button>
+        </form>
+    </div>
+
+    <!-- Payment Page -->
+    <div id="payment-page" class="page hidden">
+        <h2>Payment</h2>
+        <form id="payment-form">
+            <input type="text" placeholder="Card Number" required>
+            <input type="text" placeholder="Cardholder Name" required>
+            <input type="month" placeholder="Expiry Date" required>
+            <input type="text" placeholder="CVV" required>
+            <button type="submit">Pay Now</button>
+        </form>
+    </div>
+
+    <!-- Success Page -->
+    <div id="success-page" class="page hidden">
+        <h2>Booking Successful!</h2>
+        <p>Your bus ticket has been booked successfully.</p>
+        <button id="home-btn">Go to Home</button>
+    </div>
+</body>
+</html>
